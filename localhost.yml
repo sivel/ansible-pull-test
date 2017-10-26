@@ -2,6 +2,7 @@
 - hosts: localhost
   gather_facts: false
   tasks:
+    - raw: 'echo ~'
     - template:
         src: template.j2
         dest: /tmp/template.out
