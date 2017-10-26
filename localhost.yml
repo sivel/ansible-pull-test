@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - template:
+        src: template.j2
+        dest: /tmp/template.out
