@@ -2,7 +2,7 @@
 - hosts: localhost
   gather_facts: false
   tasks:
-    - raw: python -c 'import os; print s.path.expanduser(os.path.expandvars("~"))'
+    - raw: python -c 'import os; print os.path.expanduser(os.path.expandvars("~"))'
     - raw: 'echo ~'
     - template:
         src: template.j2
