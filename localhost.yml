@@ -2,9 +2,8 @@
 - hosts: localhost
   gather_facts: false
   tasks:
-    - raw: python -c 'import os; print os.path.expanduser(os.path.expandvars("~"))'
-    - raw: 'echo ~'
-    - raw: 'echo ~root'
+    - debug:
+    - ping:
     - template:
         src: template.j2
         dest: /tmp/template.out
